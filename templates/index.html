@@ -8,13 +8,21 @@
 </head>
 <body>
 
+	<h1 id="title">Regresion Lineal</h1>
+	<div id=" info">
+	<p>La siguiente aplicacion utiliza un modelo de regresion lineal para predecir la probabilidad de que una persona de click en un anuncio. 
+	Para el entrenamiento se utilizó el dataSet <a href="http://ejemplo.com/dataset">advertising Spending</a>
+	La variable del dataSet que se utilizó para el entrenamiento es la variable "Daily Time Spending on Site" que nos indica el tiempo que esta la persona en el sitio
+	y para la variable de salida se utlizó una variable de tipo discreta que solo indica si dió click al anuncio o no (un 0 y 1)</p>
+	</div>
 <form action = "{{url_for('predecir')}}" method="POST">
 
 	<input type="text" name="tiempo" placeholder="Tiempo en mins" required="required">
-	<button type="submit" class="btn"> Predict</button>
+	<button type="submit" class="btn"> Predecir</button>
 
 </form>
-<b>{{prediction_text}}</b>
+<b id="out" style="color: blue; font-size: 20px;  text-align: center;">{{prediction_text}}</b>
+
 
 </body>
 </html>
